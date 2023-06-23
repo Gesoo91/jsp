@@ -3,37 +3,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Index</title>
-  <script>
-    window.onload = function() {
-      const introDiv = document.getElementById('intro');
-      introDiv.addEventListener('click', function(event) {
-        const target = event.target;
-        if (target.tagName === 'A') {
-          event.preventDefault(); // 기본 동작(링크 이동) 중단
-          console.log('링크 클릭');
-          window.location.href = target.href; // 링크 이동
-        } else if (target === introDiv) {
-          event.preventDefault(); // 기본 동작(링크 이동) 중단
-          console.log('intro 클릭');
-          const link = introDiv.querySelector('a');
-          window.location.href = link.href; // 링크 이동
-        }
-      });
-    }
-  </script>
-  <link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="common.css">
+<meta charset="UTF-8">
+<title>Insert title here</title>
 </head>
 <body>
-  <div class="wrap">
-    <div id="intro">
-      <div id="list" class="intro_box"> <a href="list.jsp">글 게시판</a></div>
-      <div id="rcp" class="intro_box"> <a href="rcp.jsp">가위바위보 게임</a></div>
-      <div id="trpg" class="intro_box"> <a href="trpg.jsp">텍스트 게임</a></div>
-    </div>
-    <%-- 글리스트에 들어가서 글 읽기를 할 수 있고, 그 안에서 글삭제,수정을 함.  게시판 아래로는 다른 기능을 연동해서 넣자.--%>
-  </div>
-  
+	<div id="header">
+		<div id="logo">
+			<a href="index.jsp">practice board</a>
+		</div>
+	</div>
+	<hr>
+	<div id="main">
+		<a href="list.jsp">글 게시판</a>
+	</div>
+	<div id="footer"></div>
+<%--todo : 데이터베이스 만들기.board3 글번호 글제목 글쓴이 글내용 글쓴시간 데이터베이스 자바와 연동시키기. 기능만들기(list,read,write,delete,edit),css꾸미기 --%>
 </body>
 </html>
