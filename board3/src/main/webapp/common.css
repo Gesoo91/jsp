@@ -1,0 +1,33 @@
+@charset "UTF-8";
+a {
+  text-decoration: none;
+}
+.wrap {
+	display: flex;
+	flex-direction: column;
+	width:1000px;
+	height:800px;
+	background-color : yellow;
+	justify-content: center;
+	align-items: center;
+}
+
+#intro {
+	display : flex;
+	height : 300px;
+	width : 600px;
+	background-color : pink;
+	text-align : center;
+	justify-content: center;
+	align-items:center;
+	
+}
+.intro_box {
+	display : flex;
+	height : 150px;
+	width : 120px;
+	background-color : green;
+	text-align : center;
+	justify-content: center;
+	align-items:center;	
+}
